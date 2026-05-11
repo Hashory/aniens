@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component, input, output, signal } from '@angu
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChevronUpDownMicro, heroFolderMicro } from '@ng-icons/heroicons/micro';
 import { FolderVM } from '#app/features/main/main-layout/timeline/services/timeline-state.service';
-import type { TimelineItemResizeStart } from '#app/features/main/main-layout/timeline/anien-timeline/anien-strip.component';
+import type { TimelineItemResizeStart } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-strip.component';
 
 @Component({
-  selector: 'app-anien-folder',
+  selector: 'app-aniens-folder',
   standalone: true,
   host: {
     '[class.focused]': 'isFocused()',
@@ -240,7 +240,7 @@ import type { TimelineItemResizeStart } from '#app/features/main/main-layout/tim
   imports: [NgIcon],
   viewProviders: [provideIcons({ heroFolderMicro, heroChevronUpDownMicro })],
 })
-export class AnienFolderComponent {
+export class AniensFolderComponent {
   public readonly item = input.required<FolderVM>();
   public readonly clipPath = input<string | null>(null);
 

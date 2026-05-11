@@ -14,7 +14,7 @@ export interface TimelineLayoutState {
   activePanel?: 'task' | 'timeline';
 }
 
-const STORAGE_KEY = 'anien.layout.v1';
+const STORAGE_KEY = 'aniens.layout.v1';
 
 @Injectable({
   providedIn: 'root',

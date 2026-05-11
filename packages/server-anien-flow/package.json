@@ -1,5 +1,5 @@
 {
-  "name": "@ani-en/server-anien-flow",
+  "name": "@aniens/server-anien-flow",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ani-en/lib-anien-flow-shared": "workspace:*",
+    "@aniens/lib-anien-flow-shared": "workspace:*",
     "@hocuspocus/extension-logger": "catalog:",
     "@hocuspocus/extension-sqlite": "catalog:",
     "@hocuspocus/server": "catalog:",

@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { componentWrapperDecorator } from '@storybook/angular';
 import {
-  AnienSidebarComponent,
+  AniensSidebarComponent,
   type MainSidebarPanel,
-} from '#app/features/main/main-layout/sidebar/anien-sidebar.component';
+} from '#app/features/main/main-layout/sidebar/aniens-sidebar.component';
 
-const meta: Meta<AnienSidebarComponent> = {
+const meta: Meta<AniensSidebarComponent> = {
   title: 'Layout/Sidebar',
-  component: AnienSidebarComponent,
+  component: AniensSidebarComponent,
   tags: ['autodocs'],
   args: {
     activePanel: 'timeline' as MainSidebarPanel,
@@ -25,7 +25,7 @@ const meta: Meta<AnienSidebarComponent> = {
 
 export default meta;
 
-type Story = StoryObj<AnienSidebarComponent>;
+type Story = StoryObj<AniensSidebarComponent>;
 
 export const TimelineSelected: Story = {
   args: {

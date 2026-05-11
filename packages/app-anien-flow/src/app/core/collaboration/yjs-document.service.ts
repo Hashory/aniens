@@ -19,7 +19,7 @@ export class YjsDocumentService {
     this.doc = new Y.Doc();
     this.provider = new HocuspocusProvider({
       url: this.websocketUrl,
-      name: 'dev-anien',
+      name: 'dev-aniens',
       document: this.doc,
     });
 

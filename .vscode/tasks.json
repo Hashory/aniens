@@ -24,7 +24,7 @@
     {
       "type": "shell",
       "label": "web-app test",
-      "command": "pnpm --filter @ani-en/web-app run test",
+      "command": "pnpm --filter @aniens/web-app run test",
       "isBackground": true,
       "problemMatcher": {
         "owner": "typescript",

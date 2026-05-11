@@ -5,11 +5,11 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { Dialog, DialogModule } from '@angular/cdk/dialog';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroCheckMicro } from '@ng-icons/heroicons/micro';
-import { AboutDialogComponent } from '#app/features/main/main-layout/anien-menu-bar/about-dialog.component';
+import { AboutDialogComponent } from '#app/features/main/main-layout/aniens-menu-bar/about-dialog.component';
 import { TimelineViewService } from '#app/features/main/main-layout/timeline-view.service';
 
 @Component({
-  selector: 'app-anien-menu-bar',
+  selector: 'app-aniens-menu-bar',
   standalone: true,
   imports: [
     CommonModule,
@@ -22,7 +22,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
     DialogModule,
   ],
   template: `
-    <div ngMenuBar class="anien-menubar" (focusin)="onFocusIn()">
+    <div ngMenuBar class="aniens-menubar" (focusin)="onFocusIn()">
       <!-- About -->
       <div
         ngMenuItem
@@ -55,7 +55,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
         ]"
         cdkAttachPopoverAsChild
       >
-        <div ngMenu #viewMenu="ngMenu" class="anien-menu">
+        <div ngMenu #viewMenu="ngMenu" class="aniens-menu">
           <ng-template ngMenuContent>
             <div
               ngMenuItem
@@ -140,7 +140,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
         ]"
         cdkAttachPopoverAsChild
       >
-        <div ngMenu #workspaceMenu="ngMenu" class="anien-menu">
+        <div ngMenu #workspaceMenu="ngMenu" class="aniens-menu">
           <ng-template ngMenuContent>
             <div ngMenuItem value="timeline edit">
               <ng-icon name="heroCheckMicro" class="check-icon"></ng-icon>
@@ -161,7 +161,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
       color: #fff;
     }
 
-    .anien-menubar {
+    .aniens-menubar {
       display: flex;
       gap: 0.5rem;
       padding: 0.5rem 1rem;
@@ -191,7 +191,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
       outline: 2px solid rgba(255, 255, 255, 0.3);
     }
 
-    .anien-menu {
+    .aniens-menu {
       top: 8px;
       display: flex;
       flex-direction: column;
@@ -204,7 +204,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
       min-width: 200px;
     }
 
-    .anien-menu[data-visible='false'] {
+    .aniens-menu[data-visible='false'] {
       display: none;
     }
 
@@ -247,7 +247,7 @@ import { TimelineViewService } from '#app/features/main/main-layout/timeline-vie
   `,
   viewProviders: [provideIcons({ heroCheckMicro })],
 })
-export class AnienMenuBarComponent {
+export class AniensMenuBarComponent {
   viewMenu = viewChild<Menu<string>>('viewMenu');
   workspaceMenu = viewChild<Menu<string>>('workspaceMenu');
 

@@ -6,13 +6,13 @@ import { DialogRef } from '@angular/cdk/dialog';
   standalone: true,
   template: `
     <div class="about-dialog">
-      <h2 class="title">About AniEn</h2>
-      <p class="description">AniEn is a modern web-based animation engine/timeline editor.</p>
+      <h2 class="title">About aniens</h2>
+      <p class="description">aniens is a modern web-based animation engine/timeline editor.</p>
 
       <div class="info-section">
         <span class="label">GitHub Repository:</span>
-        <a href="https://github.com/Hashory/tryout-AniEn3.git" target="_blank" class="link">
-          Hashory/tryout-AniEn3
+        <a href="https://github.com/Hashory/aniens.git" target="_blank" class="link">
+          Hashory/aniens
         </a>
       </div>
 

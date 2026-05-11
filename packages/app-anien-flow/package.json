@@ -1,5 +1,5 @@
 {
-  "name": "@ani-en/app-anien-flow",
+  "name": "@aniens/app-anien-flow",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",

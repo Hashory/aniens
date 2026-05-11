@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
 export type MainSidebarPanel = 'task' | 'timeline';
 
 @Component({
-  selector: 'app-anien-sidebar',
+  selector: 'app-aniens-sidebar',
   imports: [],
   template: `
     <nav class="sidebar" aria-label="Main sidebar">
@@ -125,7 +125,7 @@ export type MainSidebarPanel = 'task' | 'timeline';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AnienSidebarComponent {
+export class AniensSidebarComponent {
   readonly activePanel = input<MainSidebarPanel>('timeline');
   readonly panelSelected = output<MainSidebarPanel>();
 

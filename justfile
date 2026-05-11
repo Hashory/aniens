@@ -22,10 +22,10 @@ typecheck:
 check: fmt-check lint typecheck
 
 dev:
-    pnpm --filter "@ani-en/app-anien-flow" --filter "@ani-en/server-anien-flow" --parallel run dev
+    pnpm --filter "@aniens/app-anien-flow" --filter "@aniens/server-anien-flow" --parallel run dev
 
 build:
-    pnpm --filter "@ani-en/app-anien-flow" run build
+    pnpm --filter "@aniens/app-anien-flow" run build
 
 docker-up:
     docker compose -f packages/server-anien-flow-infra/docker-compose.yml up -d

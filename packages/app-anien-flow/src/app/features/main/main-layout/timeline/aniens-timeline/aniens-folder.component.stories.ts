@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { AnienFolderComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-folder.component';
+import { AniensFolderComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-folder.component';
 import type { FolderVM } from '#app/features/main/main-layout/timeline/services/timeline-state.service';
 
 const baseFolder: FolderVM = {
@@ -27,9 +27,9 @@ const makeFolder = (overrides: Partial<FolderVM>): FolderVM => ({
   ...overrides,
 });
 
-const meta: Meta<AnienFolderComponent> = {
+const meta: Meta<AniensFolderComponent> = {
   title: 'Timeline/Folder',
-  component: AnienFolderComponent,
+  component: AniensFolderComponent,
   tags: ['autodocs'],
   args: {
     item: baseFolder,
@@ -39,7 +39,7 @@ const meta: Meta<AnienFolderComponent> = {
 
 export default meta;
 
-type Story = StoryObj<AnienFolderComponent>;
+type Story = StoryObj<AniensFolderComponent>;
 
 export const Unselected: Story = {
   args: {

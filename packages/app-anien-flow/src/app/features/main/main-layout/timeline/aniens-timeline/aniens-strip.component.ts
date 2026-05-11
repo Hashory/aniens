@@ -17,7 +17,7 @@ export interface TimelineItemResizeStart {
 }
 
 @Component({
-  selector: 'app-anien-strip',
+  selector: 'app-aniens-strip',
   standalone: true,
   host: {
     '[class.focused]': 'isFocused()',
@@ -289,7 +289,7 @@ export interface TimelineItemResizeStart {
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AnienStripComponent {
+export class AniensStripComponent {
   public readonly item = input.required<StripVM>();
   public readonly clipPath = input<string | null>(null);
   public readonly sheduleStrip = input(false);

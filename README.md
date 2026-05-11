@@ -1,4 +1,4 @@
-# AniEn3
+# aniens
 
 A prototype video editing application.
 

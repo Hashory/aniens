@@ -1,33 +1,33 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@angular/core';
 import { AngularSplitModule, SplitGutterInteractionEvent } from 'angular-split';
-import { AnienTimelineComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-timeline.component';
+import { AniensTimelineComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-timeline.component';
 import { ScreenComponent } from '#app/features/main/main-layout/screen/screen.component';
-import { AnienMenuBarComponent } from '#app/features/main/main-layout/anien-menu-bar/anien-menu-bar.component';
+import { AniensMenuBarComponent } from '#app/features/main/main-layout/aniens-menu-bar/aniens-menu-bar.component';
 import { TimelineViewService } from '#app/features/main/main-layout/timeline-view.service';
 import { LayoutPersistenceService } from '#app/features/main/main-layout/layout-persistence.service';
 import {
-  AnienSidebarComponent,
+  AniensSidebarComponent,
   MainSidebarPanel,
-} from '#app/features/main/main-layout/sidebar/anien-sidebar.component';
+} from '#app/features/main/main-layout/sidebar/aniens-sidebar.component';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
   imports: [
     AngularSplitModule,
-    AnienTimelineComponent,
+    AniensTimelineComponent,
     ScreenComponent,
-    AnienMenuBarComponent,
-    AnienSidebarComponent,
+    AniensMenuBarComponent,
+    AniensSidebarComponent,
   ],
   template: `
-    <app-anien-menu-bar></app-anien-menu-bar>
+    <app-aniens-menu-bar></app-aniens-menu-bar>
     <div class="layout-shell">
       <div class="sidebar-shell">
-        <app-anien-sidebar
+        <app-aniens-sidebar
           [activePanel]="activePanel()"
           (panelSelected)="onPanelSelected($event)"
-        ></app-anien-sidebar>
+        ></app-aniens-sidebar>
       </div>
 
       <div class="content-shell">
@@ -57,7 +57,7 @@ import {
 
                 @if (viewService.videoTimelineVisible()) {
                   <div class="timeline-row video-row">
-                    <app-anien-timeline></app-anien-timeline>
+                    <app-aniens-timeline></app-aniens-timeline>
                   </div>
                 }
 
@@ -142,7 +142,7 @@ import {
         overflow: hidden;
       }
 
-      .timeline-row.video-row app-anien-timeline {
+      .timeline-row.video-row app-aniens-timeline {
         width: 100%;
         height: 100%;
       }

@@ -18,8 +18,8 @@ import {
 } from '#app/features/main/main-layout/timeline/services/timeline-state.service';
 import type { MoveTargetInput } from '#app/features/main/main-layout/timeline/services/timeline-store.service';
 import { TimelineUploadService } from '#app/features/main/main-layout/timeline/services/timeline-upload.service';
-import { AnienFolderComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-folder.component';
-import { AnienStripComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-strip.component';
+import { AniensFolderComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-folder.component';
+import { AniensStripComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-strip.component';
 
 interface SnapGuideState {
   tick: number | null;
@@ -73,7 +73,7 @@ interface ItemDragState {
 }
 
 @Component({
-  selector: 'app-anien-timeline',
+  selector: 'app-aniens-timeline',
   standalone: true,
   host: {
     '[style.--timeline-tick-size]': 'tickSizeCss()',
@@ -150,7 +150,7 @@ interface ItemDragState {
 
           @for (item of timelineItems(); track item.id) {
             @if (item.type === 'strip') {
-              <app-anien-strip
+              <app-aniens-strip
                 [item]="item"
                 [clipPath]="itemClipPath(item)"
                 [sheduleStrip]="item.sourceKind === 'solid'"
@@ -161,7 +161,7 @@ interface ItemDragState {
                 (externalDrop)="onStripExternalDrop($event, item)"
               />
             } @else {
-              <app-anien-folder
+              <app-aniens-folder
                 [item]="item"
                 [clipPath]="itemClipPath(item)"
                 (itemMouseDown)="onItemMouseDown($event, item)"
@@ -575,9 +575,9 @@ interface ItemDragState {
     `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AnienStripComponent, AnienFolderComponent],
+  imports: [AniensStripComponent, AniensFolderComponent],
 })
-export class AnienTimelineComponent implements OnDestroy {
+export class AniensTimelineComponent implements OnDestroy {
   private readonly stateService = inject(TimelineStateService);
   private readonly collabService = inject(YjsDocumentService);
   private readonly uploadService = inject(TimelineUploadService);

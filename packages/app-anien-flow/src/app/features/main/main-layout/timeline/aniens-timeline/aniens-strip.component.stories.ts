@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { AnienStripComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-strip.component';
+import { AniensStripComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-strip.component';
 import type { StripVM } from '#app/features/main/main-layout/timeline/services/timeline-state.service';
 
 const baseStrip: StripVM = {
@@ -28,9 +28,9 @@ const makeStrip = (overrides: Partial<StripVM>): StripVM => ({
   ...overrides,
 });
 
-const meta: Meta<AnienStripComponent> = {
+const meta: Meta<AniensStripComponent> = {
   title: 'Timeline/Strip',
-  component: AnienStripComponent,
+  component: AniensStripComponent,
   tags: ['autodocs'],
   args: {
     item: baseStrip,
@@ -42,7 +42,7 @@ const meta: Meta<AnienStripComponent> = {
 
 export default meta;
 
-type Story = StoryObj<AnienStripComponent>;
+type Story = StoryObj<AniensStripComponent>;
 
 export const Unselected: Story = {
   args: {
@@ -250,7 +250,7 @@ export const SchedulePresetOrder: Story = {
     template: `
       <div style="position: relative; height: 360px; width: 680px; background: #0b0f12; --timeline-tick-size: 2px; --timeline-track-height: 34px; --timeline-strip-offset: 2px; --timeline-strip-padding-x: 9px;">
         @for (strip of strips; track strip.id) {
-          <app-anien-strip
+          <app-aniens-strip
             [item]="strip"
             [clipPath]="null"
             [sheduleStrip]="true"

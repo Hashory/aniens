@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { signal } from '@angular/core';
 import * as Y from 'yjs';
 import { vi } from 'vitest';
-import { AnienTimelineComponent } from '#app/features/main/main-layout/timeline/anien-timeline/anien-timeline.component';
+import { AniensTimelineComponent } from '#app/features/main/main-layout/timeline/aniens-timeline/aniens-timeline.component';
 import {
   StripVM,
   TimelineStateService,
@@ -35,19 +35,19 @@ class FakeYjsDocumentService {
   }
 }
 
-describe('AnienTimelineComponent', () => {
-  let component: AnienTimelineComponent;
-  let fixture: ComponentFixture<AnienTimelineComponent>;
+describe('AniensTimelineComponent', () => {
+  let component: AniensTimelineComponent;
+  let fixture: ComponentFixture<AniensTimelineComponent>;
   let stateService: TimelineStateService;
   let fakeCollab: FakeYjsDocumentService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AnienTimelineComponent],
+      imports: [AniensTimelineComponent],
       providers: [{ provide: YjsDocumentService, useClass: FakeYjsDocumentService }],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AnienTimelineComponent);
+    fixture = TestBed.createComponent(AniensTimelineComponent);
     component = fixture.componentInstance;
     stateService = TestBed.inject(TimelineStateService);
     fakeCollab = TestBed.inject(YjsDocumentService) as unknown as FakeYjsDocumentService;

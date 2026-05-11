@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { MainLayoutComponent } from '#app/features/main/main-layout/main-layout.component';
 
 @Component({
-  selector: 'app-anien-main',
+  selector: 'app-aniens-main',
   imports: [MainLayoutComponent],
   template: ` <app-main-layout />`,
   styles: [
@@ -14,6 +14,6 @@ import { MainLayoutComponent } from '#app/features/main/main-layout/main-layout.
     `,
   ],
 })
-export class AnienMainComponent {
-  protected readonly title = signal('tryout-AniEn3');
+export class AniensMainComponent {
+  protected readonly title = signal('aniens');
 }

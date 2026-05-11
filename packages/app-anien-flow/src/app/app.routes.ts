@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('#app/features/main/anien-main.component').then((m) => m.AnienMainComponent),
+      import('#app/features/main/aniens-main.component').then((m) => m.AniensMainComponent),
   },
   {
     path: '**',
