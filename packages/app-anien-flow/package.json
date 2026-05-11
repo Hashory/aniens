@@ -1,5 +1,5 @@
 {
-  "name": "@ani-en/web-app",
+  "name": "@ani-en/app-anien-flow",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "typecheck": "ngc -p tsconfig.app.json --noEmit",
-    "storybook": "ng run web-app:storybook",
-    "storybook:build": "ng run web-app:build-storybook"
+    "storybook": "ng run app-anien-flow:storybook",
+    "storybook:build": "ng run app-anien-flow:build-storybook"
   },
   "private": true,
   "dependencies": {

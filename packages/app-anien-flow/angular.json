@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "web-app": {
+    "app-anien-flow": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "web-app:build:production"
+              "buildTarget": "app-anien-flow:build:production"
             },
             "development": {
-              "buildTarget": "web-app:build:development"
+              "buildTarget": "app-anien-flow:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "web-app:build",
+            "browserTarget": "app-anien-flow:build",
             "tsConfig": "tsconfig.storybook.json",
             "port": 6006,
             "compodoc": false
@@ -94,7 +94,7 @@
           "builder": "@storybook/angular:build-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "web-app:build",
+            "browserTarget": "app-anien-flow:build",
             "tsConfig": "tsconfig.storybook.json",
             "outputDir": "storybook-static",
             "compodoc": false

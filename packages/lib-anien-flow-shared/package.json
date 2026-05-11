@@ -1,5 +1,5 @@
 {
-  "name": "@ani-en/shared-lib",
+  "name": "@ani-en/lib-anien-flow-shared",
   "version": "0.0.1",
   "main": "src/index.ts",
   "types": "src/index.ts",

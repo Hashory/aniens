@@ -22,19 +22,19 @@ typecheck:
 check: fmt-check lint typecheck
 
 dev:
-    pnpm --filter "@ani-en/web-app" --filter "@ani-en/sync-server" --parallel run dev
+    pnpm --filter "@ani-en/app-anien-flow" --filter "@ani-en/server-anien-flow" --parallel run dev
 
 build:
-    pnpm --filter "@ani-en/web-app" run build
+    pnpm --filter "@ani-en/app-anien-flow" run build
 
 docker-up:
-    docker compose -f packages/local-infra/docker-compose.yml up -d
+    docker compose -f packages/server-anien-flow-infra/docker-compose.yml up -d
 
 docker-down:
-    docker compose -f packages/local-infra/docker-compose.yml down
+    docker compose -f packages/server-anien-flow-infra/docker-compose.yml down
 
 docker-restart:
-    docker compose -f packages/local-infra/docker-compose.yml restart
+    docker compose -f packages/server-anien-flow-infra/docker-compose.yml restart
 
 init-garage:
-    packages/local-infra/init-garage.sh
+    packages/server-anien-flow-infra/init-garage.sh
