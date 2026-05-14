@@ -1,0 +1,3 @@
+[workspace]
+members = ["packages/app-check-24fps", "packages/lib-aftereffects-aep-parser-rs"]
+resolver = "3"
