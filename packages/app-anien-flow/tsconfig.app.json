@@ -1,11 +1,23 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": ["vite/client"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts", "src/**/*.stories.ts"]
+  "include": [
+    "vite.config.ts",
+    "src/main.ts",
+    "src/vite-env.d.ts",
+    "src/vue/**/*.ts",
+    "src/vue/**/*.vue",
+    "src/app/core/vue-signal.ts",
+    "src/app/core/collaboration/yjs-document.service.ts",
+    "src/app/features/main/main-layout/layout-persistence.service.ts",
+    "src/app/features/main/main-layout/timeline-view.service.ts",
+    "src/app/features/main/main-layout/timeline/models/timeline.types.ts",
+    "src/app/features/main/main-layout/timeline/services/timeline-normalization.ts",
+    "src/app/features/main/main-layout/timeline/services/timeline-state.service.ts",
+    "src/app/features/main/main-layout/timeline/services/timeline-store.service.ts",
+    "src/app/features/main/main-layout/timeline/services/timeline-upload.service.ts"
+  ]
 }

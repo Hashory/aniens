@@ -1,10 +1,7 @@
-import { Injectable, signal } from '@angular/core';
 import * as Y from 'yjs';
 import { HocuspocusProvider } from '@hocuspocus/provider';
+import { signal } from '#app/core/vue-signal';
 
-@Injectable({
-  providedIn: 'root',
-})
 export class YjsDocumentService {
   private readonly doc: Y.Doc;
   private readonly provider: HocuspocusProvider;
@@ -48,3 +45,5 @@ export class YjsDocumentService {
     this.provider.on('synced', callback);
   }
 }
+
+export const yjsDocumentService = new YjsDocumentService();

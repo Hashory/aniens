@@ -1,16 +1,13 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { signal } from '#app/core/vue-signal';
 import {
-  LayoutPersistenceService,
+  layoutPersistenceService,
   TimelineLayoutState,
 } from '#app/features/main/main-layout/layout-persistence.service';
 
 type TimelineKind = 'script' | 'video' | 'audio' | 'keyframe';
 
-@Injectable({
-  providedIn: 'root',
-})
 export class TimelineViewService {
-  private readonly layoutPersistence = inject(LayoutPersistenceService);
+  private readonly layoutPersistence = layoutPersistenceService;
 
   private readonly _scriptTimelineVisible = signal<boolean>(true);
   private readonly _videoTimelineVisible = signal<boolean>(true);
@@ -107,3 +104,5 @@ export class TimelineViewService {
     }
   }
 }
+
+export const timelineViewService = new TimelineViewService();

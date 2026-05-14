@@ -1,5 +1,5 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from '#app/app.config';
-import { App } from '#app/app';
+import { createApp } from 'vue';
+import App from '#vue/App.vue';
+import './styles.css';
 
-bootstrapApplication(App, appConfig).catch((err) => console.error(err));
+createApp(App).mount('#app');

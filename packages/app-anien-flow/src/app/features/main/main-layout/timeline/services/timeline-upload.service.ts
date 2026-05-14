@@ -1,5 +1,3 @@
-import { Injectable } from '@angular/core';
-
 export interface UploadedTimelineFile {
   fileName: string;
   mimeType: string;
@@ -18,9 +16,6 @@ interface UploadResponse {
   error?: string;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
 export class TimelineUploadService {
   private readonly uploadEndpoint = `${window.location.origin}/ws/upload`;
 
@@ -53,3 +48,5 @@ export class TimelineUploadService {
     };
   }
 }
+
+export const timelineUploadService = new TimelineUploadService();

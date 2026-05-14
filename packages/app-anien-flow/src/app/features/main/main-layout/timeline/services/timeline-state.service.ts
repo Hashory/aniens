@@ -1,4 +1,4 @@
-import { DestroyRef, computed, inject, Injectable, signal } from '@angular/core';
+import { computed, signal } from '#app/core/vue-signal';
 import {
   DeleteItemOptions,
   FolderCreationInput,
@@ -6,7 +6,7 @@ import {
   MoveTargetInput,
   StripCreationInput,
   StripUpdateInput,
-  YjsTimelineService,
+  yjsTimelineService,
 } from '#app/features/main/main-layout/timeline/services/timeline-store.service';
 import { TimelineSnapshot } from '#app/features/main/main-layout/timeline/models/timeline.types';
 
@@ -66,12 +66,8 @@ export interface FolderVM {
 
 export type TimelineItemVM = StripVM | FolderVM;
 
-@Injectable({
-  providedIn: 'root',
-})
 export class TimelineStateService {
-  private readonly yjsService = inject(YjsTimelineService);
-  private readonly destroyRef = inject(DestroyRef);
+  private readonly yjsService = yjsTimelineService;
 
   // Zoom tuning values are intentionally centralized for quick future adjustments.
   public readonly BASE_TICK_SIZE_PX = 2;
@@ -253,13 +249,11 @@ export class TimelineStateService {
   });
 
   constructor() {
-    const unsubscribe = this.yjsService.subscribeTimeline((snapshot) => {
+    this.yjsService.subscribeTimeline((snapshot) => {
       this.model.set(snapshot);
       this.reconcileSelection(snapshot);
       this.reconcileFolderBrandOverrides(snapshot);
     });
-
-    this.destroyRef.onDestroy(unsubscribe);
   }
 
   public setCurrentTick(tick: number): void {
@@ -859,3 +853,5 @@ export class TimelineStateService {
     return Math.min(this.MAX_ZOOM_LEVEL, Math.max(this.MIN_ZOOM_LEVEL, level));
   }
 }
+
+export const timelineStateService = new TimelineStateService();

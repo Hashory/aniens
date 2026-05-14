@@ -4,13 +4,12 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "oxlint .",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "catalog:",
-    "eslint": "catalog:",
-    "typescript-eslint": "catalog:"
+    "oxlint": "catalog:",
+    "typescript": "catalog:"
   },
   "private": true
 }

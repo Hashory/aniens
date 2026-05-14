@@ -1,5 +1,3 @@
-import { Injectable } from '@angular/core';
-
 interface TimelineVisibilityState {
   script: boolean;
   video: boolean;
@@ -16,9 +14,6 @@ export interface TimelineLayoutState {
 
 const STORAGE_KEY = 'aniens.layout.v1';
 
-@Injectable({
-  providedIn: 'root',
-})
 export class LayoutPersistenceService {
   private cachedState: TimelineLayoutState | null = null;
 
@@ -71,3 +66,5 @@ export class LayoutPersistenceService {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
   }
 }
+
+export const layoutPersistenceService = new LayoutPersistenceService();

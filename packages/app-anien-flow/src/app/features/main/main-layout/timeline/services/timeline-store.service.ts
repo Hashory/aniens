@@ -1,6 +1,5 @@
-import { Injectable, OnDestroy, inject } from '@angular/core';
 import * as Y from 'yjs';
-import { YjsDocumentService } from '#app/core/collaboration/yjs-document.service';
+import { yjsDocumentService } from '#app/core/collaboration/yjs-document.service';
 import {
   FolderItemSnapshot,
   StripItemSnapshot,
@@ -93,11 +92,8 @@ interface YWritableMap {
   set(key: string, value: unknown): unknown;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
-export class YjsTimelineService implements OnDestroy {
-  private readonly collab = inject(YjsDocumentService);
+export class YjsTimelineService {
+  private readonly collab = yjsDocumentService;
   private readonly localTransactionOrigin = { source: 'timeline-local' };
 
   private readonly doc: Y.Doc;
@@ -154,7 +150,7 @@ export class YjsTimelineService implements OnDestroy {
     this.publishNow(this.buildSnapshot());
   }
 
-  public ngOnDestroy(): void {
+  public destroy(): void {
     this.yRoot.unobserve(this.handleSnapshotUpdate);
     this.yStripSources.unobserveDeep(this.handleSnapshotUpdate);
     this.yFolderSources.unobserveDeep(this.handleSnapshotUpdate);
@@ -992,3 +988,5 @@ export class YjsTimelineService implements OnDestroy {
     }
   }
 }
+
+export const yjsTimelineService = new YjsTimelineService();

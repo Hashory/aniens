@@ -5,13 +5,13 @@ default:
     @just --list
 
 fmt:
-    pnpm exec prettier . --write
+    pnpm exec oxfmt . --write
 
 fmt-files *files:
-    pnpm exec prettier --write {{files}}
+    pnpm exec oxfmt --write {{files}}
 
 fmt-check:
-    pnpm exec prettier . --check
+    pnpm exec oxfmt . --check
 
 lint:
     pnpm -r --if-present run lint
