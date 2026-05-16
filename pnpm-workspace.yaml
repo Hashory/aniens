@@ -26,7 +26,7 @@ catalog:
   '@hocuspocus/extension-logger': ^3.4.4
   '@hocuspocus/extension-sqlite': ^3.4.4
   '@hocuspocus/provider': ^3.4.4
-  '@hocuspocus/server': ^3.4.4
+  '@hocuspocus/server': ^4.0.0
   '@ng-icons/core': ^33.2.2
   '@ng-icons/heroicons': ^33.2.2
   '@storybook/addon-a11y': ^10.3.6
