@@ -52,8 +52,8 @@ catalogs:
       specifier: ^3.4.4
       version: 3.4.4
     '@hocuspocus/provider':
-      specifier: ^3.4.4
-      version: 3.4.4
+      specifier: ^4.3.0
+      version: 4.3.0
     '@hocuspocus/server':
       specifier: ^3.4.4
       version: 3.4.4
@@ -191,7 +191,7 @@ importers:
         version: 21.2.12(@angular/common@21.2.12(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.12(@angular/common@21.2.12(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2)))(rxjs@7.8.2)
       '@hocuspocus/provider':
         specifier: 'catalog:'
-        version: 3.4.4(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)
+        version: 4.3.0(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)
       '@ng-icons/core':
         specifier: 'catalog:'
         version: 33.2.2(@angular-devkit/schematics@21.2.10(chokidar@5.0.0))(@angular/common@21.2.12(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.12(@angular/compiler@21.2.12)(rxjs@7.8.2)(zone.js@0.16.2))(@schematics/angular@21.2.10(chokidar@5.0.0))(rxjs@7.8.2)
@@ -688,6 +688,7 @@ packages:
   '@angular/platform-browser-dynamic@21.2.5':
     resolution: {integrity: sha512-0yDogezPC4OaqkvL/3Pa5mBodOCCUnO4CTOxC+fPy7L+dRhQfVEwtOsN9XkZv5eMGemGeCcNKdchSuYsVkCA2g==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    deprecated: '@angular/platform-browser-dynamic is deprecated. Use `@angular/platform-browser` instead.'
     peerDependencies:
       '@angular/common': 21.2.5
       '@angular/compiler': 21.2.5
@@ -1664,6 +1665,9 @@ packages:
   '@hocuspocus/common@3.4.4':
     resolution: {integrity: sha512-RykIJ0tsHHMP4Xk+4UCbc7SO5LgGxGUSTdbh6anJEsaALAyqinf1Nn5HYuMjLPolAmsar1v++m9zufR09NLpXA==}
 
+  '@hocuspocus/common@4.3.0':
+    resolution: {integrity: sha512-8USsMvso01aMKOSSyvb8oTAlfES/nBM+Y74XjW5Fy5ovmOaVpoRRBrktIrEVwydrp8Cr6C66ivc0orcW/3P+Kg==}
+
   '@hocuspocus/extension-database@3.4.4':
     resolution: {integrity: sha512-z7iq2Dw+GOp4aQq7ys3PD0BA++7tQdXBsSHZ+8mkAbxfTDzjzQ576TphxPiXXC1WQ7yjeFXq03xp/KLIhg3Pyg==}
     peerDependencies:
@@ -1675,8 +1679,8 @@ packages:
   '@hocuspocus/extension-sqlite@3.4.4':
     resolution: {integrity: sha512-nwZ25qNh3EbJvKqYGR1kVLWa64JnzapuQ0AmsV8B7Ye0+OAr34PFHfY/3urqrXdYegB4YVr1jPp7qhBXDkCpaw==}
 
-  '@hocuspocus/provider@3.4.4':
-    resolution: {integrity: sha512-KbsMAfdYcIJD8eMU/5QnpXcSOvIWAcCNI33FSRSaKCIpYBFtAwkYIwWnZJmPZ8a1BMAtqQc+uvy9+UQf7GHnGQ==}
+  '@hocuspocus/provider@4.3.0':
+    resolution: {integrity: sha512-eS5dECLnJDgELI2AfZNvr5jS0B6IWFoo7eAUgwwOzy1bf7KdPagXAYCtSWqSXmLMwjABlubZJQg8FVrTefU0cA==}
     peerDependencies:
       y-protocols: ^1.0.6
       yjs: ^13.6.8
@@ -7861,6 +7865,10 @@ snapshots:
     dependencies:
       lib0: 0.2.117
 
+  '@hocuspocus/common@4.3.0':
+    dependencies:
+      lib0: 0.2.117
+
   '@hocuspocus/extension-database@3.4.4(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)':
     dependencies:
       '@hocuspocus/server': 3.4.4(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)
@@ -7892,17 +7900,13 @@ snapshots:
       - y-protocols
       - yjs
 
-  '@hocuspocus/provider@3.4.4(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)':
+  '@hocuspocus/provider@4.3.0(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)':
     dependencies:
-      '@hocuspocus/common': 3.4.4
+      '@hocuspocus/common': 4.3.0
       '@lifeomic/attempt': 3.1.0
       lib0: 0.2.117
-      ws: 8.20.0
       y-protocols: 1.0.7(yjs@13.6.30)
       yjs: 13.6.30
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   '@hocuspocus/server@3.4.4(y-protocols@1.0.7(yjs@13.6.30))(yjs@13.6.30)':
     dependencies:
